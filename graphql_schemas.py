@@ -2,7 +2,7 @@ import strawberry
 from typing import List
 from strawberry.fastapi import GraphQLRouter
 from sqlalchemy.orm import Session
-from crud import get_items, create_item, update_item, delete_item
+from app.cruds.item import get_items, create_item, update_item, delete_item
 from database import SessionLocal
 
 @strawberry.type

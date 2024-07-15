@@ -1,19 +1,8 @@
 import strawberry
-from typing import List
-from strawberry.fastapi import GraphQLRouter
 from sqlalchemy.orm import Session
-from app.cruds.item import get_items, create_item, update_item, delete_item
+from app.cruds.item import create_item, update_item, delete_item
 from database import SessionLocal
-
-@strawberry.type
-class ItemType:
-    id: int
-    name: str
-    description: str
-
-@strawberry.type
-class Query:
-    items: List[ItemType] = strawberry.field(resolver=lambda: get_items(SessionLocal()))
+from app.types.item_type import ItemType
 
 @strawberry.input
 class ItemInput:
@@ -36,6 +25,3 @@ class Mutation:
     def delete_item(self, id: int) -> ItemType:
         db: Session = SessionLocal()
         return delete_item(db, id)
-
-schema = strawberry.Schema(query=Query, mutation=Mutation)
-graphql_app = GraphQLRouter(schema)

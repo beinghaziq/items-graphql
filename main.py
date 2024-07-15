@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from database import engine, Base
-from graphql_schemas import graphql_app
+from app.schemas.item import graphql_app
 
 Base.metadata.create_all(bind=engine)
 

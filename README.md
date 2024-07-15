@@ -5,11 +5,13 @@ Heads on to `/graphql` to run queries and mutations
 
 Get all items query
 
-![Uploading Screenshot 2024-07-15 at 11.02.36 AM.png…]()
+<img width="470" alt="Screenshot 2024-07-15 at 11 02 36 AM" src="https://github.com/user-attachments/assets/d44f84be-6a35-4ac5-b93a-6a8085cde67b">
+
 
 create item mutation
 
-![Uploading Screenshot 2024-07-15 at 11.02.32 AM.png…]()
+<img width="481" alt="Screenshot 2024-07-15 at 11 02 32 AM" src="https://github.com/user-attachments/assets/cd843118-eb4a-4348-8da4-4dd51d21aeef">
+
 
 update item mutation
 
